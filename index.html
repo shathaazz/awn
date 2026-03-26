@@ -1,5 +1,7 @@
-[07/10/47 11:52 ص] Shetradingg: <!DOCTYPE html>
+ landing · HTML
+Copy
 
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -21,387 +23,373 @@
     --green: #27AE60;
     --green-light: #2ECC71;
   }
-
-- { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-
-body {
-font-family: ‘Tajawal’, sans-serif;
-background: var(–black);
-color: var(–white);
-overflow-x: hidden;
-}
-
-.ambient {
-position: fixed;
-inset: 0;
-pointer-events: none;
-z-index: 0;
-background:
-radial-gradient(ellipse 70% 40% at 15% 10%, rgba(201,168,76,0.07) 0%, transparent 60%),
-radial-gradient(ellipse 50% 30% at 85% 90%, rgba(201,168,76,0.04) 0%, transparent 50%),
-radial-gradient(ellipse 40% 60% at 50% 50%, rgba(201,168,76,0.02) 0%, transparent 70%);
-}
-
-.container {
-max-width: 1080px;
-margin: 0 auto;
-padding: 0 24px;
-position: relative;
-z-index: 1;
-}
-
-/* NAV */
-nav {
-position: sticky;
-top: 0;
-z-index: 100;
-background: rgba(8,8,8,0.85);
-backdrop-filter: blur(20px);
-border-bottom: 1px solid rgba(201,168,76,0.1);
-padding: 16px 0;
-}
-
-nav .inner {
-max-width: 1080px;
-margin: 0 auto;
-padding: 0 24px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-
-.logo { font-size: 22px; font-weight: 900; color: var(–white); letter-spacing: -0.5px; }
-.logo span { color: var(–gold); }
-
-.nav-links { display: flex; gap: 28px; list-style: none; }
-.nav-links a { color: var(–muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
-.nav-links a:hover { color: var(–gold); }
-
-@media (max-width: 600px) { .nav-links { display: none; } }
-
-/* HERO */
-.hero { padding: 90px 0 70px; text-align: center; background: var(–black); }
-
-.hero-badge {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-background: rgba(201,168,76,0.1);
-border: 1px solid rgba(201,168,76,0.25);
-color: var(–gold);
-font-size: 12px;
-font-weight: 700;
-letter-spacing: 2.5px;
-padding: 8px 18px;
-border-radius: 50px;
-margin-bottom: 32px;
-text-transform: uppercase;
-animation: fadeDown 0.6s ease both;
-}
-
-.hero h1 {
-font-size: clamp(36px, 6vw, 64px);
-font-weight: 900;
-line-height: 1.15;
-margin-bottom: 20px;
-animation: fadeDown 0.6s ease 0.1s both;
-}
-
-.hero h1 .brand {
-background: linear-gradient(135deg, var(–gold-light) 0%, var(–gold) 50%, var(–gold-dark) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-}
-
-.hero-sub {
-font-size: 18px;
-color: var(–muted);
-max-width: 520px;
-margin: 0 auto 44px;
-line-height: 1.75;
-animation: fadeDown 0.6s ease 0.2s both;
-}
-
-.stats-bar {
-display: flex;
-justify-content: center;
-gap: 48px;
-margin-top: 64px;
-padding-top: 48px;
-border-top: 1px solid rgba(255,255,255,0.06);
-flex-wrap: wrap;
-animation: fadeUp 0.6s ease 0.4s both;
-}
-
-.stat-item { text-align: center; }
-.stat-num { font-size: 36px; font-weight: 900; color: var(–gold-light); line-height: 1; margin-bottom: 6px; }
-.stat-label { font-size: 13px; color: var(–muted); }
-
-/* SECTION TITLE */
-.sec-title { text-align: center; margin-bottom: 50px; }
-.sec-title h2 { font-size: clamp(24px, 3.5vw, 36px); font-weight: 800; margin-bottom: 10px; }
-.sec-title h2 span { color: var(–gold); }
-.sec-title p { color: var(–muted); font-size: 15px; }
-
-/* PRICING */
-#pricing { padding: 80px 0; }
-
-.setup-note {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-background: rgba(201,168,76,0.08);
-border: 1px solid rgba(201,168,76,0.18);
-border-radius: 14px;
-padding: 14px 24px;
-margin: 0 auto 48px;
-font-size: 14px;
-color: var(–muted);
-max-width: 480px;
-}
-
-.setup-note strong { color: var(–gold); }
-
-.pricing-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 24px;
-max-width: 760px;
-margin: 0 auto;
-}
-[07/10/47 11:52 ص] Shetradingg: @media (max-width: 600px) { .pricing-grid { grid-template-columns: 1fr; } }
-
-.card {
-background: var(–dark2);
-border: 1px solid rgba(255,255,255,0.07);
-border-radius: 22px;
-padding: 32px 24px;
-display: flex;
-flex-direction: column;
-transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-position: relative;
-}
-
-.card:hover { transform: translateY(-5px); border-color: rgba(201,168,76,0.25); }
-
-.card.popular {
-background: linear-gradient(160deg, #1C1A12 0%, #181818 100%);
-border: 1.5px solid var(–gold);
-box-shadow: 0 20px 60px rgba(201,168,76,0.12);
-}
-
-.card.popular:hover { transform: translateY(-5px); }
-
-.pop-tag {
-position: absolute;
-top: -13px;
-left: 50%;
-transform: translateX(-50%);
-background: linear-gradient(90deg, var(–gold-dark), var(–gold-light));
-color: var(–black);
-font-size: 11px;
-font-weight: 800;
-letter-spacing: 1.5px;
-padding: 5px 16px;
-border-radius: 50px;
-white-space: nowrap;
-text-transform: uppercase;
-}
-
-.plan-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(–muted); margin-bottom: 10px; }
-.card.popular .plan-label { color: var(–gold); }
-
-.msg-pill {
-display: inline-block;
-background: rgba(255,255,255,0.06);
-border-radius: 6px;
-font-size: 12px;
-color: var(–muted);
-padding: 4px 10px;
-margin-bottom: 14px;
-}
-
-.card.popular .msg-pill { background: rgba(201,168,76,0.12); color: var(–gold); }
-
-.price-row { display: flex; align-items: baseline; gap: 4px; margin-bottom: 6px; }
-
-.p-amount { font-size: 52px; font-weight: 900; line-height: 1; color: var(–white); }
-.card.popular .p-amount { color: var(–gold-light); }
-
-.p-currency { font-size: 18px; font-weight: 700; color: var(–muted); }
-.p-period { font-size: 13px; color: var(–muted); }
-
-.plan-desc { font-size: 13px; color: var(–muted); line-height: 1.6; margin-bottom: 22px; }
-
-hr.divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 20px 0; }
-.card.popular hr.divider { border-color: rgba(201,168,76,0.15); }
-
-.features { list-style: none; flex: 1; margin-bottom: 28px; }
-
-.features li {
-display: flex;
-align-items: flex-start;
-gap: 10px;
-padding: 10px 0;
-font-size: 14px;
-color: #AAAAAA;
-border-bottom: 1px solid rgba(255,255,255,0.04);
-line-height: 1.5;
-}
-
-.features li:last-child { border-bottom: none; }
-.card.popular .features li { color: #CCC8B0; }
-
-.chk {
-width: 17px; height: 17px;
-border-radius: 50%;
-background: rgba(39,174,96,0.15);
-color: var(–green-light);
-display: flex; align-items: center; justify-content: center;
-font-size: 10px;
-flex-shrink: 0;
-margin-top: 2px;
-}
-
-.btn {
-display: block;
-text-align: center;
-padding: 15px;
-border-radius: 12px;
-font-family: ‘Tajawal’, sans-serif;
-font-size: 15px;
-font-weight: 700;
-cursor: pointer;
-border: none;
-text-decoration: none;
-transition: all 0.25s;
-}
-
-.btn-ghost { background: transparent; border: 1.5px solid rgba(255,255,255,0.12); color: var(–white); }
-.btn-ghost:hover { border-color: var(–gold); color: var(–gold); }
-
-.btn-primary { background: linear-gradient(135deg, var(–gold-light), var(–gold)); color: var(–black); }
-.btn-primary:hover {
-background: linear-gradient(135deg, #F0DC90, var(–gold-light));
-box-shadow: 0 8px 28px rgba(201,168,76,0.3);
-transform: translateY(-1px);
-}
-
-/* COMPARE */
-#compare { padding: 80px 0; }
-
-.table-wrap {
-background: var(–dark2);
-border: 1px solid rgba(255,255,255,0.07);
-border-radius: 20px;
-overflow: hidden;
-}
-
-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-
-thead th {
-padding: 18px 16px;
-font-weight: 800;
-font-size: 13px;
-letter-spacing: 1px;
-text-transform: uppercase;
-color: var(–muted);
-border-bottom: 1px solid rgba(255,255,255,0.08);
-text-align: center;
-}
-
-thead th:first-child { text-align: right; color: var(–white); }
-thead th.hl { color: var(–gold); }
-
-tbody td {
-padding: 13px 16px;
-text-align: center;
-border-bottom: 1px solid rgba(255,255,255,0.04);
-color: var(–muted);
-}
-
-tbody td:first-child { text-align: right; color: var(–white); font-weight: 500; }
-tbody tr:last-child td { border-bottom: none; }
-tbody tr:hover td { background: rgba(255,255,255,0.015); }
-
-.
-[07/10/47 11:52 ص] Shetradingg: y { color: var(–green-light); font-size: 15px; }
-.n { color: var(–muted2); font-size: 15px; }
-.v { color: var(–white); font-weight: 600; font-size: 13px; }
-.vg { color: var(–gold); font-weight: 700; font-size: 13px; }
-
-/* ROI */
-#roi { padding: 80px 0; }
-
-.roi-box {
-background: var(–dark2);
-border: 1px solid rgba(201,168,76,0.2);
-border-radius: 24px;
-padding: 48px 40px;
-text-align: center;
-}
-
-.roi-box h2 { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
-.roi-box h2 span { color: var(–gold); }
-.roi-box p { color: var(–muted); font-size: 14px; margin-bottom: 40px; }
-
-.roi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-@media (max-width: 600px) { .roi-grid { grid-template-columns: 1fr; } }
-
-.roi-stat .r-num { font-size: 44px; font-weight: 900; color: var(–gold-light); line-height: 1; margin-bottom: 8px; }
-.roi-stat .r-label { font-size: 13px; color: var(–muted); }
-
-/* PAYMENT */
-.payment-note {
-background: var(–dark3);
-border: 1px solid rgba(255,255,255,0.07);
-border-radius: 16px;
-padding: 24px 28px;
-margin-top: 48px;
-display: flex;
-align-items: flex-start;
-gap: 16px;
-}
-
-.pay-ico { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
-.pay-info h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
-.pay-info p { font-size: 13px; color: var(–muted); line-height: 1.7; }
-.pay-info strong { color: var(–gold); }
-
-/* FOOTER */
-footer {
-text-align: center;
-padding: 40px 0 60px;
-border-top: 1px solid rgba(255,255,255,0.06);
-color: var(–muted);
-font-size: 13px;
-}
-
-footer .f-logo { font-size: 20px; font-weight: 900; color: var(–white); margin-bottom: 10px; }
-footer .f-logo span { color: var(–gold); }
-footer p { margin-top: 6px; }
-footer strong { color: var(–gold); }
-
-@keyframes fadeDown {
-from { opacity: 0; transform: translateY(-18px); }
-to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-from { opacity: 0; transform: translateY(18px); }
-to { opacity: 1; transform: translateY(0); }
-}
+ 
+  * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+ 
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+ 
+  .ambient {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 70% 40% at 15% 10%, rgba(201,168,76,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 30% at 85% 90%, rgba(201,168,76,0.04) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 60% at 50% 50%, rgba(201,168,76,0.02) 0%, transparent 70%);
+  }
+ 
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+ 
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8,8,8,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    padding: 16px 0;
+  }
+ 
+  nav .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+ 
+  .logo { font-size: 22px; font-weight: 900; color: var(--white); letter-spacing: -0.5px; }
+  .logo span { color: var(--gold); }
+ 
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+ 
+  @media (max-width: 600px) { .nav-links { display: none; } }
+ 
+  /* HERO */
+  .hero { padding: 90px 0 70px; text-align: center; background: var(--black); }
+ 
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.25);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    animation: fadeDown 0.6s ease both;
+  }
+ 
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    animation: fadeDown 0.6s ease 0.1s both;
+  }
+ 
+  .hero h1 .brand {
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+ 
+  .hero-sub {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto 44px;
+    line-height: 1.75;
+    animation: fadeDown 0.6s ease 0.2s both;
+  }
+ 
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 64px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    flex-wrap: wrap;
+    animation: fadeUp 0.6s ease 0.4s both;
+  }
+ 
+  .stat-item { text-align: center; }
+  .stat-num { font-size: 36px; font-weight: 900; color: var(--gold-light); line-height: 1; margin-bottom: 6px; }
+  .stat-label { font-size: 13px; color: var(--muted); }
+ 
+  /* SECTION TITLE */
+  .sec-title { text-align: center; margin-bottom: 50px; }
+  .sec-title h2 { font-size: clamp(24px, 3.5vw, 36px); font-weight: 800; margin-bottom: 10px; }
+  .sec-title h2 span { color: var(--gold); }
+  .sec-title p { color: var(--muted); font-size: 15px; }
+ 
+  /* PRICING */
+  #pricing { padding: 80px 0; }
+ 
+  .setup-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.18);
+    border-radius: 14px;
+    padding: 14px 24px;
+    margin: 0 auto 48px;
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 480px;
+  }
+ 
+  .setup-note strong { color: var(--gold); }
+ 
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+ 
+  @media (max-width: 600px) { .pricing-grid { grid-template-columns: 1fr; } }
+ 
+  .card {
+    background: var(--dark2);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 22px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+ 
+  .card:hover { transform: translateY(-5px); border-color: rgba(201,168,76,0.25); }
+ 
+  .card.popular {
+    background: linear-gradient(160deg, #1C1A12 0%, #181818 100%);
+    border: 1.5px solid var(--gold);
+    box-shadow: 0 20px 60px rgba(201,168,76,0.12);
+  }
+ 
+  .card.popular:hover { transform: translateY(-5px); }
+ 
+  .pop-tag {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 5px 16px;
+    border-radius: 50px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+ 
+  .plan-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .card.popular .plan-label { color: var(--gold); }
+ 
+  .price-row { display: flex; align-items: baseline; gap: 4px; margin-bottom: 6px; }
+ 
+  .p-amount { font-size: 52px; font-weight: 900; line-height: 1; color: var(--white); }
+  .card.popular .p-amount { color: var(--gold-light); }
+ 
+  .p-currency { font-size: 18px; font-weight: 700; color: var(--muted); }
+  .p-period { font-size: 13px; color: var(--muted); }
+ 
+  .plan-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 22px; }
+ 
+  hr.divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 20px 0; }
+  .card.popular hr.divider { border-color: rgba(201,168,76,0.15); }
+ 
+  .features { list-style: none; flex: 1; margin-bottom: 28px; }
+ 
+  .features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #AAAAAA;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    line-height: 1.5;
+  }
+ 
+  .features li:last-child { border-bottom: none; }
+  .card.popular .features li { color: #CCC8B0; }
+ 
+  .chk {
+    width: 17px; height: 17px;
+    border-radius: 50%;
+    background: rgba(39,174,96,0.15);
+    color: var(--green-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+ 
+  .btn {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+ 
+  .btn-ghost { background: transparent; border: 1.5px solid rgba(255,255,255,0.12); color: var(--white); }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+ 
+  .btn-primary { background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: var(--black); }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #F0DC90, var(--gold-light));
+    box-shadow: 0 8px 28px rgba(201,168,76,0.3);
+    transform: translateY(-1px);
+  }
+ 
+  /* COMPARE */
+  #compare { padding: 80px 0; }
+ 
+  .table-wrap {
+    background: var(--dark2);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+ 
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+ 
+  thead th {
+    padding: 18px 16px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+ 
+  thead th:first-child { text-align: right; color: var(--white); }
+  thead th.hl { color: var(--gold); }
+ 
+  tbody td {
+    padding: 13px 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--muted);
+  }
+ 
+  tbody td:first-child { text-align: right; color: var(--white); font-weight: 500; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: rgba(255,255,255,0.015); }
+ 
+  .y { color: var(--green-light); font-size: 15px; }
+  .n { color: var(--muted2); font-size: 15px; }
+  .v { color: var(--white); font-weight: 600; font-size: 13px; }
+  .vg { color: var(--gold); font-weight: 700; font-size: 13px; }
+ 
+  /* ROI */
+  #roi { padding: 80px 0; }
+ 
+  .roi-box {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 24px;
+    padding: 48px 40px;
+    text-align: center;
+  }
+ 
+  .roi-box h2 { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+  .roi-box h2 span { color: var(--gold); }
+  .roi-box p { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+ 
+  .roi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  @media (max-width: 600px) { .roi-grid { grid-template-columns: 1fr; } }
+ 
+  .roi-stat .r-num { font-size: 44px; font-weight: 900; color: var(--gold-light); line-height: 1; margin-bottom: 8px; }
+  .roi-stat .r-label { font-size: 13px; color: var(--muted); }
+ 
+  /* PAYMENT */
+  .payment-note {
+    background: var(--dark3);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-top: 48px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+ 
+  .pay-ico { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .pay-info h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .pay-info p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+  .pay-info strong { color: var(--gold); }
+ 
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px 0 60px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: var(--muted);
+    font-size: 13px;
+  }
+ 
+  footer .f-logo { font-size: 20px; font-weight: 900; color: var(--white); margin-bottom: 10px; }
+  footer .f-logo span { color: var(--gold); }
+  footer p { margin-top: 6px; }
+  footer strong { color: var(--gold); }
+ 
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+ 
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 </style>
-
 </head>
 <body>
-
+ 
 <div class="ambient"></div>
-
+ 
 <!-- NAV -->
-
 <nav>
   <div class="inner">
     <div class="logo">نظام <span>عون</span></div>
@@ -412,95 +400,89 @@ to { opacity: 1; transform: translateY(0); }
     </ul>
   </div>
 </nav>
-
+ 
 <!-- HERO -->
-
 <section class="hero">
   <div class="container">
     <div class="hero-badge">☕ خدمة عملاء ذكية · المقاهي السعودية</div>
     <h1>سندك في<br><span class="brand">خدمة زبائنك</span></h1>
     <p class="hero-sub">موظف ذكي يرد على زبائن مقهاك تلقائياً — على مدار الساعة، بلهجة سعودية أصيلة، بدون موظف إضافي</p>
-<div class="stats-bar">
-  <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">رد فوري بدون توقف</div></div>
-  <div class="stat-item"><div class="stat-num">3 ثوانٍ</div><div class="stat-label">متوسط وقت الرد</div></div>
-  <div class="stat-item"><div class="stat-num">80%+</div><div class="stat-label">الأسئلة تُحل تلقائياً</div></div>
-  <div class="stat-item"><div class="stat-num">صفر</div><div class="stat-label">موظف إضافي</div></div>
-</div>
-
+    <div class="stats-bar">
+      <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">رد فوري بدون توقف</div></div>
+      <div class="stat-item"><div class="stat-num">3 ثوانٍ</div><div class="stat-label">متوسط وقت الرد</div></div>
+      <div class="stat-item"><div class="stat-num">80%+</div><div class="stat-label">الأسئلة تُحل تلقائياً</div></div>
+      <div class="stat-item"><div class="stat-num">صفر</div><div class="stat-label">موظف إضافي</div></div>
+    </div>
   </div>
 </section>
-
+ 
 <!-- PRICING -->
-
 <section id="pricing">
   <div class="container">
     <div class="sec-title">
       <h2>اختر <span>باقتك</span></h2>
       <p>باقتان بسيطتان — بدون تعقيد، بدون عقود طويلة</p>
     </div>
-<div class="setup-note">
-  🎁 إعداد مجاني + <strong>أسبوع تجريبي مجاناً</strong>
-</div>
-
-<div class="pricing-grid">
-
-  <!-- Basic -->
-  <div class="card">
-    <div class="plan-label">الباقة الأساسية</div>
-    <div class="price-row">
-      <span class="p-amount">499</span>
-      <div><span class="p-currency">ر.س</span><br><span class="p-period">/ شهرياً</span></div>
+    <div class="setup-note">
+      🎁 إعداد مجاني + <strong>أسبوع تجريبي مجاناً</strong>
     </div>
-    <p class="plan-desc">للمقاهي التي تبدأ رحلة خدمة العملاء الذكية</p>
-    <hr class="divider">
-    <ul class="features">
-      <li><span class="chk">✓</span> رد تلقائي على واتساب</li>
-      <li><span class="chk">✓</span> إجابة الأسئلة الشائعة (موقع، دوام، منيو، باركينج)</li>
-      <li><span class="chk">✓</span> لهجة سعودية نجدية طبيعية</li>
-[07/10/47 11:52 ص] Shetradingg: <li><span class="chk">✓</span> تحويل للموظف عند الحاجة</li>
-      <li><span class="chk">✓</span> أسبوع تجريبي مجاناً</li>
-    </ul>
-    <a href="https://wa.me/966576169560?text=هلا، أبي أعرف أكثر عن الباقة الأساسية لنظام عون" target="_blank" class="btn btn-ghost">ابدأ الآن</a>
-  </div>
-
-  <!-- Growth -->
-  <div class="card popular">
-    <div class="pop-tag">🔥 الأكثر طلباً</div>
-    <div class="plan-label">باقة النمو</div>
-    <div class="price-row">
-      <span class="p-amount">699</span>
-      <div><span class="p-currency">ر.س</span><br><span class="p-period">/ شهرياً</span></div>
+    <div class="pricing-grid">
+ 
+      <!-- Basic -->
+      <div class="card">
+        <div class="plan-label">الباقة الأساسية</div>
+        <div class="price-row">
+          <span class="p-amount">499</span>
+          <div><span class="p-currency">ر.س</span><br><span class="p-period">/ شهرياً</span></div>
+        </div>
+        <p class="plan-desc">للمقاهي التي تبدأ رحلة خدمة العملاء الذكية</p>
+        <hr class="divider">
+        <ul class="features">
+          <li><span class="chk">✓</span> رد تلقائي على واتساب</li>
+          <li><span class="chk">✓</span> إجابة الأسئلة الشائعة (موقع، دوام، منيو، باركينج)</li>
+          <li><span class="chk">✓</span> لهجة سعودية نجدية طبيعية</li>
+          <li><span class="chk">✓</span> تحويل للموظف عند الحاجة</li>
+          <li><span class="chk">✓</span> أسبوع تجريبي مجاناً</li>
+        </ul>
+        <a href="https://wa.me/966576169560?text=هلا، أبي أعرف أكثر عن الباقة الأساسية لنظام عون" target="_blank" class="btn btn-ghost">ابدأ الآن</a>
+      </div>
+ 
+      <!-- Growth -->
+      <div class="card popular">
+        <div class="pop-tag">🔥 الأكثر طلباً</div>
+        <div class="plan-label">باقة النمو</div>
+        <div class="price-row">
+          <span class="p-amount">699</span>
+          <div><span class="p-currency">ر.س</span><br><span class="p-period">/ شهرياً</span></div>
+        </div>
+        <p class="plan-desc">للمقاهي النشطة التي تريد بناء قاعدة زبائن وفية</p>
+        <hr class="divider">
+        <ul class="features">
+          <li><span class="chk">✓</span> كل مميزات الأساسية</li>
+          <li><span class="chk">✓</span> يرسل عروضك تلقائياً لكل زبون سبق تواصل معك ويزيد طلباتك</li>
+          <li><span class="chk">✓</span> يرجع الزبون اللي اختفى ويخليه يطلب مرة ثانية — تلقائياً كل 60 يوم</li>
+          <li><span class="chk">✓</span> تقرير أسبوعي مفصل — أوقات الذروة، أكثر سؤال تكرر، عدد الزبائن الجدد</li>
+          <li><span class="chk">✓</span> تخصيص الموظف الذكي (اسمه وأسلوبه) ليناسب شخصية مقهاك</li>
+          <li><span class="chk">✓</span> دعم فني بأولوية</li>
+          <li><span class="chk">✓</span> أسبوع تجريبي مجاناً</li>
+        </ul>
+        <a href="https://wa.me/966576169560?text=هلا، أبي أعرف أكثر عن باقة النمو لنظام عون" target="_blank" class="btn btn-primary">ابدأ الآن</a>
+      </div>
+ 
     </div>
-    <p class="plan-desc">للمقاهي النشطة التي تريد بناء قاعدة زبائن وفية</p>
-    <hr class="divider">
-    <ul class="features">
-      <li><span class="chk">✓</span> كل مميزات الأساسية</li>
-      <li><span class="chk">✓</span> يرسل عروضك تلقائياً لكل زبون سبق تواصل معك ويزيد طلباتك</li>
-      <li><span class="chk">✓</span> يرجع الزبون اللي اختفى ويخليه يطلب مرة ثانية — تلقائياً كل 60 يوم</li>
-      <li><span class="chk">✓</span> تقرير أسبوعي مفصل — أوقات الذروة، أكثر سؤال تكرر، عدد الزبائن الجدد</li>
-      <li><span class="chk">✓</span> تخصيص الموظف الذكي (اسمه وأسلوبه) ليناسب شخصية مقهاك</li>
-      <li><span class="chk">✓</span> دعم فني بأولوية</li>
-      <li><span class="chk">✓</span> أسبوع تجريبي مجاناً</li>
-    </ul>
-    <a href="https://wa.me/966576169560?text=هلا، أبي أعرف أكثر عن باقة النمو لنظام عون" target="_blank" class="btn btn-primary">ابدأ الآن</a>
-  </div>
-
-</div>
-
-<!-- Payment note -->
-<div class="payment-note">
-  <div class="pay-ico">🏦</div>
-  <div class="pay-info">
-    <h4>طريقة الدفع</h4>
-    <p>الدفع عبر <strong>تحويل بنكي مباشر</strong> — يتم إرسال تفاصيل الحساب بعد التواصل واختيار الباقة. <strong>الإعداد مجاني.</strong></p>
-  </div>
-</div>
-
+ 
+    <!-- Payment note -->
+    <div class="payment-note">
+      <div class="pay-ico">🏦</div>
+      <div class="pay-info">
+        <h4>طريقة الدفع</h4>
+        <p>الدفع عبر <strong>تحويل بنكي مباشر</strong> — يتم إرسال تفاصيل الحساب بعد التواصل واختيار الباقة. <strong>الإعداد مجاني.</strong></p>
+      </div>
+    </div>
   </div>
 </section>
-
+ 
 <!-- COMPARE -->
-
 <section id="compare">
   <div class="container">
     <div class="sec-title">
@@ -533,9 +515,8 @@ to { opacity: 1; transform: translateY(0); }
     </div>
   </div>
 </section>
-
+ 
 <!-- ROI -->
-
 <section id="roi">
   <div class="container">
     <div class="roi-box">
@@ -544,21 +525,23 @@ to { opacity: 1; transform: translateY(0); }
       <div class="roi-grid">
         <div class="roi-stat"><div class="r-num">24/7</div><div class="r-label">رد فوري بدون انتظار</div></div>
         <div class="roi-stat"><div class="r-num">80%+</div><div class="r-label">الأسئلة تُحل تلقائياً</div></div>
-[07/10/47 11:52 ص] Shetradingg: <div class="roi-stat"><div class="r-num">صفر</div><div class="r-label">موظف إضافي مطلوب</div></div>
+        <div class="roi-stat"><div class="r-num">صفر</div><div class="r-label">موظف إضافي مطلوب</div></div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
-
 <footer>
   <div class="container">
     <div class="f-logo">نظام <span>عون</span></div>
     <p>سندك في خدمة زبائنك — على مدار الساعة</p>
-    <p style="margin-top:16px">جميع الباقات · <strong>أسبوع تجريبي مجاناً</strong> · بون عقود · إلغاء في أي وقت</p>
+    <p style="margin-top:16px">جميع الباقات · <strong>أسبوع تجريبي مجاناً</strong> · بدون عقود · إلغاء في أي وقت</p>
   </div>
 </footer>
-
+ 
+</body>
+</html>
+ 
 </body>
 </html>
